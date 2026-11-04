@@ -1,0 +1,18 @@
+
+# Arquivos compilados
+*.exe
+*.o
+*.obj
+*.out
+
+# Arquivos temporarios
+*.tmp
+*.log
+
+# Configuracoes locais do Dev-C++
+*.dev
+*.layout
+
+# Windows
+Thumbs.db
+Desktop.ini
