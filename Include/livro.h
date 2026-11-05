@@ -9,6 +9,7 @@ typedef struct {
     int ano;
 } Livro;
 
+int lerInteiro(const char *mensagem, int minimo, int maximo, int *valor);
 int cadastrarLivro(Livro *livro);
 void exibirLivro(Livro livro);
 
