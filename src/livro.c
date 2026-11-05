@@ -106,3 +106,5 @@ void exibirLivro(Livro livro) {
     printf("Autor: %s\n", livro.autor);
     printf("Ano: %d\n", livro.ano);
 }
+
+
