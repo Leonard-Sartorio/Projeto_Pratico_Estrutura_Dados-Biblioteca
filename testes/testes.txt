@@ -1,0 +1,54 @@
+01	Cadastrar livro	
+Ação: Cadastrar um livro com ID, título, autor e ano válidos. 
+ID 30, IT a coisa, Stephen King, 1983 
+Resultado Esperado: Livro aparece na lista e na árvore.
+
+Resultado Ocorrido: Sucesso Aparece na arvore como na lista
+
+Saida:
+
+Escolha uma opcao: 2
+
+ID: 30
+Titulo: It a Coisa
+Autor: Stephen King
+Ano: 1983
+
+
+02 Cadastrar mais de um livro
+Ação: cadastrar mais livros
+ID 10, O Iluminado,  Stephen King, 1977 	
+
+Resultado esperado: ver se aparecem listados, ordenados.
+
+Resultado ocorrido: Sucesso, os livros apareceram listados e ordenados quando solicitado por por titulo e ID
+
+03 Consultar ID menor e maior
+
+Ação: consultar livros com ID diferentes e maior e menores entre si e ver se aparece como solicitados
+
+Sucesso: aparecem como solicitados os livros de maior e menor ID.
+
+Saidas:
+Livro com menor ID:
+
+ID: 10
+Titulo: O Iluminado
+Autor: Stephen King
+Ano: 1977
+
+Livro com maior ID:
+
+ID: 30
+Titulo: It a Coisa
+Autor: Stephen King
+Ano: 1983
+
+04 Tratar erro: cadastrar Livro com ID igual
+Ação: sera efetuado a tentativa de cadastrar;
+ID 30, Cujo, Stephen King, 1985
+
+Resultado Esperado: Mostrar a mensagem de erro e impedir o cadastramento
+
+Resultado Ocorrido: A mensagem de erro foi exibida
+Saida: Erro: ja existe um livro com esse ID.
