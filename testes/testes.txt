@@ -1,54 +1,260 @@
-01	Cadastrar livro	
-Ação: Cadastrar um livro com ID, título, autor e ano válidos. 
-ID 30, IT a coisa, Stephen King, 1983 
-Resultado Esperado: Livro aparece na lista e na árvore.
 
-Resultado Ocorrido: Sucesso Aparece na arvore como na lista
+REGISTRO DE TESTES — SISTEMA DE BIBLIOTECA
 
-Saida:
+========================================
+T01 - Cadastro de livro
+========================================
 
-Escolha uma opcao: 2
+Ação:
+Cadastrar um livro com dados válidos.
 
-ID: 30
-Titulo: It a Coisa
-Autor: Stephen King
-Ano: 1983
+Resultado Esperado:
+Livro inserido na lista e na árvore.
+
+Resultado Ocorrido:
+Livro cadastrado com sucesso, aparecendo tanto na lista quanto na árvore.
+
+Status: APROVADO
 
 
-02 Cadastrar mais de um livro
-Ação: cadastrar mais livros
-ID 10, O Iluminado,  Stephen King, 1977 	
+========================================
+T02 - Impedir cadastro com ID duplicado
+========================================
 
-Resultado esperado: ver se aparecem listados, ordenados.
+Ação:
+Cadastrar dois livros com o mesmo ID.
 
-Resultado ocorrido: Sucesso, os livros apareceram listados e ordenados quando solicitado por por titulo e ID
+Resultado Esperado:
+Segundo cadastro recusado.
 
-03 Consultar ID menor e maior
+Resultado Ocorrido:
+A mensagem de erro foi exibida.
 
-Ação: consultar livros com ID diferentes e maior e menores entre si e ver se aparece como solicitados
+Status: APROVADO
 
-Sucesso: aparecem como solicitados os livros de maior e menor ID.
 
-Saidas:
-Livro com menor ID:
+========================================
+T03 - Exibir lista vazia
+========================================
 
-ID: 10
-Titulo: O Iluminado
-Autor: Stephen King
-Ano: 1977
+Ação:
+Exibir a lista sem livros cadastrados.
 
-Livro com maior ID:
+Resultado Esperado:
+Mensagem indicando lista vazia.
 
-ID: 30
-Titulo: It a Coisa
-Autor: Stephen King
-Ano: 1983
+Resultado Ocorrido:
+A mensagem de lista vazia foi exibida.
 
-04 Tratar erro: cadastrar Livro com ID igual
-Ação: sera efetuado a tentativa de cadastrar;
-ID 30, Cujo, Stephen King, 1985
+Status: APROVADO
 
-Resultado Esperado: Mostrar a mensagem de erro e impedir o cadastramento
 
-Resultado Ocorrido: A mensagem de erro foi exibida
-Saida: Erro: ja existe um livro com esse ID.
+========================================
+T04 - Remover livro existente
+========================================
+
+Ação:
+Remover um livro existente pelo seu ID.
+
+Resultado Esperado:
+Livro removido da lista e da árvore.
+
+Resultado Ocorrido:
+As mensagens indicando lista e árvore vazias foram exibidas.
+
+Status: APROVADO
+
+
+========================================
+T05 - Buscar ID inexistente
+========================================
+
+Ação:
+Buscar um ID que não está cadastrado no sistema.
+
+Resultado Esperado:
+Mensagem de livro não encontrado.
+
+Resultado Ocorrido:
+A mensagem de ID inexistente foi exibida.
+
+Status: APROVADO
+
+
+========================================
+T06 - Consultar menor e maior ID
+========================================
+
+Ação:
+Consultar os livros com menor e maior ID cadastrados.
+
+Resultado Esperado:
+Retorno dos livros correspondentes.
+
+Resultado Ocorrido:
+Os livros com maior e menor ID foram apresentados conforme solicitado.
+
+Status: APROVADO
+
+
+========================================
+T07 - Listar livros pela árvore
+========================================
+
+Ação:
+Listar os livros utilizando o percurso em ordem da árvore.
+
+Resultado Esperado:
+Livros apresentados em ordem crescente de ID.
+
+Resultado Ocorrido:
+Os livros apareceram listados na árvore e ordenados pelo ID.
+
+Status: APROVADO
+
+
+========================================
+T08 - Ordenar livros por título
+========================================
+
+Ação:
+Executar a ordenação dos livros pelo título.
+
+Resultado Esperado:
+Livros apresentados em ordem alfabética.
+
+Resultado Ocorrido:
+Os livros apareceram ordenados por título.
+
+Status: APROVADO
+
+
+========================================
+T09 - Inserir ações na pilha
+========================================
+
+Ação:
+Realizar várias operações que geram registros no histórico.
+
+Resultado Esperado:
+Histórico apresentado do mais recente para o mais antigo.
+
+Resultado Ocorrido:
+As ações foram registradas e apareceram no histórico.
+
+Status: APROVADO
+
+
+========================================
+T10 - Remover ação da pilha
+========================================
+
+Ação:
+Remover a ação mais recente utilizando a operação POP.
+
+Resultado Esperado:
+Ação mais recente retirada do histórico.
+
+Resultado Ocorrido:
+A ação foi removida e sua retirada foi confirmada fora do histórico.
+
+Status: APROVADO
+
+
+========================================
+T11 - Inserir vários livros na fila
+========================================
+
+Ação:
+Adicionar vários livros à fila de atendimento.
+
+Resultado Esperado:
+Livros mantidos na ordem de entrada.
+
+Resultado Ocorrido:
+Os livros foram organizados na fila conforme a ordem de entrada.
+
+Status: APROVADO
+
+
+========================================
+T12 - Atender próximo livro
+========================================
+
+Ação:
+Realizar o atendimento do próximo livro da fila.
+
+Resultado Esperado:
+Primeiro livro inserido na fila removido.
+
+Resultado Ocorrido:
+O próximo livro foi atendido e removido da fila com sucesso.
+
+Status: APROVADO
+
+
+========================================
+T13 - Atender com fila vazia
+========================================
+
+Ação:
+Tentar realizar um atendimento sem livros na fila.
+
+Resultado Esperado:
+Mensagem indicando fila vazia.
+
+Resultado Ocorrido:
+A mensagem de fila vazia foi exibida.
+
+Status: APROVADO
+
+
+========================================
+T14 - Remover do cadastro livro presente na fila
+========================================
+
+Ação:
+Cadastrar um livro, adicioná-lo à fila e depois removê-lo do cadastro.
+
+Resultado Esperado:
+Livro removido da lista e da árvore, mas mantido na fila.
+
+Resultado Ocorrido:
+O livro foi removido da lista e da árvore, permanecendo na fila de atendimento.
+
+Status: APROVADO
+
+
+========================================
+T15 - Atender livro removido do cadastro
+========================================
+
+Ação:
+Atender um livro que foi removido do cadastro, mas permanece na fila.
+
+Resultado Esperado:
+Cópia do livro apresentada e removida da fila.
+
+Resultado Ocorrido:
+Foi exibida a mensagem de livro atendido e a remoção da fila foi confirmada.
+
+Status: APROVADO
+
+
+========================================
+T16 - Limpar cadastro com fila preenchida
+========================================
+
+Ação:
+Cadastrar livros, adicioná-los à fila e executar a opção de limpeza.
+
+Resultado Esperado:
+Lista, árvore e fila ficam vazias.
+
+Resultado Ocorrido:
+Foram exibidas as mensagens indicando a ausência de elementos nas estruturas.
+
+Status: APROVADO
+
+
+
