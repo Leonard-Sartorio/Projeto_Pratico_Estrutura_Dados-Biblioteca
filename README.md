@@ -41,7 +41,7 @@ A lista e a árvore mantêm os livros cadastrados, enquanto a pilha armazena o h
 
 A fila armazena uma cópia dos dados do livro. Portanto, caso um livro seja removido do cadastro enquanto ainda estiver aguardando atendimento, sua cópia continuará disponível na fila até ser atendida ou até que a fila seja limpa.
 
-O histórico da pilha registra as operações, mas não possui funcionalidade de desfazer ações.
+O histórico da pilha registra as operações, mas não possui funcionalidade de desfazer ações, um detalhe a notar que so são guardados no histórico ações que modificam as estruturas, realizar consultas não constam na pilha.
 
 ## Organização do projeto
 
